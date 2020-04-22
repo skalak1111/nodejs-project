@@ -8,3 +8,11 @@ const colors = fs.readFileSync('colors.txt', 'UTF-8');
 const filtered = _.filter(colors, function(data) {
     return data.indexOf('blue')
 })
+
+console.log('First');
+const colors2 = fs.readFile('colors.txt', 'UTF-8', function(err, data) {
+    console.log('Second');
+    //console.log(data);
+}) //this is a async function.
+
+console.log('Third');
